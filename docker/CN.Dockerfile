@@ -12,7 +12,7 @@ Components: main contrib non-free non-free-firmware\n\
 Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg" \
 > /etc/apt/sources.list.d/debian.sources
 
-RUN apt-get update && apt-get install -y gcc && \
+RUN apt-get update && apt-get install -y gcc build-essential && \
     pip config set global.index-url https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple && \
     mkdir -p build && \
     pip wheel -w build tgcrypto
